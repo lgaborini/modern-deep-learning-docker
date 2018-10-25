@@ -41,9 +41,9 @@ RUN pip3 --no-cache-dir install jupyter && \
 EXPOSE 8888
 
 #
-# Tensorflow 1.6.0 - CPU
-#
-RUN pip3 install --no-cache-dir --upgrade tensorflow 
+# Tensorflow 1.5.0 - CPU
+# Downgraded from current Tensorflow, no AVX instruction support
+RUN pip3 install --no-cache-dir --upgrade tensorflow==1.5 
 
 # Expose port for TensorBoard
 EXPOSE 6006

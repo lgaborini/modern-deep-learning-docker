@@ -1,5 +1,16 @@
 # Modern Deep Learning Docker Image
 
+## About this fork
+
+This fork is almost identical to the [base repository](https://github.com/waleedka/modern-deep-learning-docker).   
+
+TensorFlow is capped at version 1.5.0.   
+This solves the crash due to the usage of AVX instructions (from TF 1.6.0 onwards).
+
+The image is also hosted on Docker Hub under `lgaborini/modern-deep-learning`.
+
+# Modern Deep Learning Docker Image
+
 This is a modern environment for building deep learning applications. It has the latest *stable* versions of the most common tools and frameworks that you're likely to need.
 
 Keep in mind that this image is big (3GB+). I considered dropping a few tools or creating different images with different toolsets, but I think that'll waste everyone's time. If you're doing deep learning then you probably have a lot of disk space anyway, and you're likely to prefer saving time over disk space.
@@ -8,7 +19,7 @@ Keep in mind that this image is big (3GB+). I considered dropping a few tools or
 ## Included Libraries
 - Ubuntu 16.04 LTS
 - Python 3.5.2
-- Tensorflow 1.6.0
+- Tensorflow **1.5.0**
 - Keras 2.1.5
 - PyTorch 0.3.1
 - OpenCV 3.4.1
