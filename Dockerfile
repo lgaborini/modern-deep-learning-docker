@@ -34,7 +34,7 @@ RUN pip3 --no-cache-dir install \
 # NOTE: disable authentication token for convenience. DON'T DO THIS ON A PUBLIC SERVER.
 RUN pip3 --no-cache-dir install jupyter && \
     mkdir /root/.jupyter && \
-    echo "c.NotebookApp.ip = '*'" \
+    echo "c.NotebookApp.ip = '0.0.0.0'" \
          "\nc.NotebookApp.open_browser = False" \
          "\nc.NotebookApp.token = ''" \
          > /root/.jupyter/jupyter_notebook_config.py
